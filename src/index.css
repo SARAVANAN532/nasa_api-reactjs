@@ -1,0 +1,165 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: white;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+}
+.bgimage {
+  width:100%;
+  height: 100%;
+  object-fit:fill;
+  flex: 1;
+}
+.imgcont {
+  width: 100%;
+  height: 100vh;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer div{
+  display: flex;
+  flex-direction: column;
+  
+}
+footer h2{
+font-size: 3.4rem;
+}
+footer h1{
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+footer button{
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  padding-right: 50px;
+  
+}
+footer button i{
+  font-size: 1.3rem;
+  transition: 200ms;
+}
+footer button i:hover{
+  opacity: 0.7;
+}
+.grad {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, #030615, rgba(255, 255, 255, 0));
+}
+.maincont {
+  position: absolute;
+  inset: 0;
+}
+.sidebarcont {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 880px;
+  position: relative;
+  float: right;
+  overflow-y: scroll;
+  width: 90%;
+  height: 100vh;
+  margin-left: auto;
+  box-shadow: 0 0 10px 40px #030615;
+  background-color: #030615;
+  z-index: 15;
+}
+.bgoverlay {
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  opacity: 0.6;
+}
+.sidebarcont div {
+  flex: 2;
+}
+.content{
+  
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  flex: 1;
+}
+.sidebarcont .title{
+  font-size: 3rem;
+}
+.content .disc{
+  font-size: 1.8rem;
+  opacity: 80%;
+}
+.content .explanation{
+  font-size: 1.8rem;
+}
+.sidebarcont button {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  margin-right: auto;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: 200ms;
+  padding: 1rem;
+}
+.sidebarcont button:hover{
+ opacity: 0.7;
+}
+@media (max-width:640px) {
+  .maincont{
+  
+    position: relative;
+    inset: 0;
+    min-width: 50%;
+  }
+  .sidebarcont {
+    margin: unset;
+  }
+}
+.loading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.loading i{
+  font-size: 3.3rem;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  from{
+    rotate: (0deg);
+  }
+  to{
+    rotate: 360deg;
+  }
+}
